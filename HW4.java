@@ -1,7 +1,17 @@
 import java.util.*;
 
+/*
+Solve a given configuration of a HiRiQ game (essentially a game of Peg Solitaire, except substitutions can be done in BOTH ways).
+Using the method 'solve' at line, we input a boolean array of length 33 that will represent the black and white pegs of a board state. 
+The board state is represented by an object called HiRiQ, which stores the weight (number of white pegs) and a config (int describing
+the current configuration).
 
-public class HW4 {
+The method 'solve' uses a Node<HiRiQ> class which contains references to parent configurations, the current configuration as well as an 
+ArrayList containing all the possible children (all the possible places where the substitution can be made). Once a substitution is done 
+and the child is checked using several heuristics for validity, we store them onto a queue and pop them one by one. 
+*/
+
+public class HiRiQSolver {
 	
 	//solve method is at LINE 163!!
 	//HIRIQ TESTER CLASS UNTIL LINE 119
